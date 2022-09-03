@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library App</title>
+    <title>Notes on Dashboard App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,11 +25,11 @@
         <div class="welcome-container">
           <img class="user-profile-big" src="./assets/img/cat0.jpg" alt="user profile image">
               <p class="greeting">Hi there,</p>
-              <p class="greet-user-name">Lucas Low (@lucaslow)</p>
+              <p class="greet-user-name">Lucas Low (lucas@lucaslow)</p>
         </div>
 
         <div class="btns-container">
-            <button class="header-btn">New</button>
+            <button class="header-btn add-book">Add New</button>
             <button class="header-btn">Upload</button>
             <button class="header-btn">Share</button>
          </div>
@@ -60,9 +60,62 @@
 
     
     <main class="content">
-      <h4>Your Projects</h4>
+      <h4>Your Library</h4>
       <div class="books"></div>
     </main>
+    <!-- create books cards from modal here -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-form">
+          <h1 class="form-title"></h1>
+          <form class="add-book-form">
+            <div class="modal-input-field">
+              <label for="book-title">Title:</label>
+              <input
+                type="text"
+                name="book-title"
+                id="book-title"
+                class="modal-form-input"
+              />
+            </div>
+            <div class="modal-input-field">
+              <label for="book-author">Author:</label>
+              <input
+                type="text"
+                name="book-author"
+                id="book-author"
+                class="modal-form-input"
+              />
+            </div>
+            <div class="modal-input-field">
+              <label for="book-pages">Pages:</label>
+              <input
+                type="number"
+                min="0"
+                name="book-pages"
+                id="book-pages"
+                class="modal-form-input"
+              />
+            </div>
+            <div class="modal-input-field">
+              <span class="modal-read">Read?</span>
+              <label class="container">
+                <input
+                  type="checkbox"
+                  name="book-read"
+                  id="book-read"
+                  class="checkmark"
+                />
+              </label>
+            </div>
+            <div class="submit-modal-form">
+              <button type="submit" class="btn form-add-button"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="./script.js"></script>
 </html>
